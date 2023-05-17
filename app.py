@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 import pandas as pd
 import pickle
 import numpy as np
+import gunicorn
 
 filename = 'modelsvm.pkl'
 classifier = pickle.load(open(filename, 'rb'))
