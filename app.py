@@ -9,7 +9,7 @@ filename = 'modelsvm.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 model = pickle.load(open('modelsvm.pkl', 'rb'))
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='Templates')
 
 @app.route('/', methods=['GET'])
 def index():
